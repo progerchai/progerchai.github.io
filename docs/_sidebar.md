@@ -1,7 +1,2 @@
-- JavaScript
-
-  - [闭包](closure.md)
-  - [原型](prototype.md)
-
-- CSS
-  - [布局](layout.md)
+- 随想
+  - [前端程序员等级](./reflections/前端程序员等级.md)
