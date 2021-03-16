@@ -193,10 +193,12 @@ font:
 # 指定自定义 .js 文件路径，支持列表；路径是相对 source 目录，如 /js/custom.js 对应存放目录 source/js/custom.js
 # Specify the path of your custom js file, support list. The path is relative to the source directory, such as `/js/custom.js` corresponding to the directory `source/js/custom.js`
 custom_js:
-
+- //at.alicdn.com/t/font_2009411_rscvhoxnmnc.js
 # 指定自定义 .css 文件路径，用法和 custom_js 相同
 # The usage is the same as custom_js
-custom_css: /css/mycss.css
+custom_css: 
+- /css/mycss.css
+- //at.alicdn.com/t/font_2009411_rscvhoxnmnc.css
 
 # 自定义 <head> 节点中的 HTML 内容
 # Customize <head> HTML content
@@ -817,6 +819,8 @@ about:
   icons:
     - { class: "iconfont icon-github-fill", link: "https://github.com/progerchai", tip: "GitHub" }
     - { class: "iconfont icon-wechat-fill wechat_qr_code", qrcode: "/static/img/wechat_qrcode.jpg" }
+    - { class: "iconfont icon-v2ex", link: "https://www.v2ex.com/member/proger", tip: "V2EX" }
+    - { class: "iconfont icon-youleyuan", link: "https://progerchai.github.io/", tip: "Playground" }
 
 
 #---------------------------
