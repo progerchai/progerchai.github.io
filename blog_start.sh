@@ -8,7 +8,7 @@ echo '拉取代码完成>>>>>>>>>>>>>>>>'
 cd $BLOGPATH/site/
 
 echo '开始搭建>>>>>>>>>>>>>>>>'
-npm install && npm run build
+npm install
 echo '开始部署>>>>>>>>>>>>>>>>'
 npx hexo deploy --generate
 # === hexo d -g

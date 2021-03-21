@@ -3,26 +3,25 @@ FROM ubuntu
 LABEL maintainer "progerchai@gmial.com"
 
 RUN export DEBIAN_FRONTEND=noninteractive && apt-get update \
-    && apt-get install nodejs npm -y --no-install-recommends tzdata
+    && apt-get install nodejs npm tzdata -y --no-install-recommends
 
 RUN TZ=Asia/Shanghai \
     && ln -snf /usr/share/zoneinfo/$TZ /etc/localtime \
-    && echo $TZ > /etc/timezone \
-    && dpkg-reconfigure -f noninteractive tzdata 
+    && echo $TZ > /etc/timezone 
 
 # 设置 /app 为工作区
 WORKDIR /app
 
+COPY package.json .
+RUN npm install
 # 将当前项目拷贝到镜像中的 /app 文件中
-COPY . /app
+COPY . .
 
 # 执行命令
-RUN npm install \
-    && npm run build \
-    && npm run server
-
+RUN npm run build
 # 执行运行命令
-# CMD ["yarn","start"]
+# CMD ["npm","run","server"]
 
-# 暴露出 3000 端口
-EXPOSE 3000
+# VOLUME [ "/www/wwwroot/www.progerchai.cn/progerchai.github.io/site/public" ]
+# 也可用一下方法把项目/app/public 挂载到外卖到只从路径site/public中
+# docker run -d -v /www/wwwroot/www.progerchai.cn/progerchai.github.io/site/public:/app/public2 progerchai/blog:0.2 bash -c 'cp -r /app/public /app/public2'
