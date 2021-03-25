@@ -50,4 +50,4 @@ clonePerson; //{ name: 'John' ,age: 24 }
 
 ---
 
-> 勘误或纠错请联系progerchai@gmail.com,感谢阅读
+> 勘误或纠错请联系progerchai@gmail.com,你的每一次指导都可以让我进步,感谢阅读
