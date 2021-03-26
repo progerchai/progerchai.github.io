@@ -1,11 +1,18 @@
-# 路径
-BLOGPATH='.'
+# 博客部署根目录
+BLOGROOTPATH='/www/wwwroot/www.proger.cn/'
 
-cd $BLOGPATH
+cd $BLOGROOTPATH
+echo '清除代码>>>>>>>>>>>>>>>>'
+# 删除代码
+rm -rf progerchai.github.io
+
 echo '开始拉取代码>>>>>>>>>>>>>>>>'
-git pull
+# git clone https://github.com/progerchai/progerchai.github.io.git
+
+git clone https://github.com.cnpmjs.org/progerchai/progerchai.github.io.git
+
 echo '拉取代码完成>>>>>>>>>>>>>>>>'
-cd $BLOGPATH/site/
+cd $BLOGROOTPATH/progerchai.github.io/site/
 
 echo '开始搭建>>>>>>>>>>>>>>>>'
 npm install
