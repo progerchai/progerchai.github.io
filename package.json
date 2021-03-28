@@ -1,0 +1,31 @@
+{
+  "name": "mydocsify",
+  "version": "1.0.0",
+  "description": "我的文档生成网站，记录一些生活，随想",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "dependencies": {
+    "hexo": "^5.4.0",
+    "docsify-cli": "^4.4.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "npx docsify serve docs"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/progerchai/progerchai.github.io.git"
+  },
+  "keywords": [
+    "docsify"
+  ],
+  "author": "progerchai",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/progerchai/progerchai.github.io/issues"
+  },
+  "homepage": "https://github.com/progerchai/progerchai.github.io#readme"
+}
