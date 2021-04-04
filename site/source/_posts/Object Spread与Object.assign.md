@@ -2,6 +2,7 @@
 title: Object Spread、Object.assign
 date: 2021-03-25 21:43:07
 tags: [前端, es6]
+keywords: [Object Spread, Object.assign]
 ---
 
 # Object Spread、Object.assign
