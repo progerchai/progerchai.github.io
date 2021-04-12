@@ -9,11 +9,12 @@ cd $BLOGROOTPATH
 # git clone https://github.com.cnpmjs.org/progerchai/progerchai.github.io.git
 
 # 判断是否已存在代码,若已存在则只需要pull即可
-echo '开始拉取代码>>>>>>>>>>>>>>>>'
+
 if [ ! -d "/progerchai.github.io/" ];then
-  echo '清除代码>>>>>>>>>>>>>>>>'
-  git clone https://github.com.cnpmjs.org/progerchai/progerchai.github.io.git
+  echo '清除代码并重新拉取>>>>>>>>>>>>>>>>'
+  git clone https://github.com/progerchai/progerchai.github.io.git
   else
+  echo '开始拉取代码>>>>>>>>>>>>>>>>'
   git pull
 fi
 
