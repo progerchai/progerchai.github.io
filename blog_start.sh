@@ -18,6 +18,9 @@ echo '开始搭建>>>>>>>>>>>>>>>>'
 npm install
 echo '开始部署>>>>>>>>>>>>>>>>'
 npx hexo deploy --generate
+
+echo '正在进行资源压缩>>>>>>>>>>>>>>>>'
+npx gulp
 # === hexo d -g
 
 echo '运行完成>>>>>>>>>>>>>>>>'
