@@ -1,4 +1,4 @@
-connect me !
+contact me !
 
 **Blog** : [https://wwww.proger.cn](https://wwww.proger.cn)
 
