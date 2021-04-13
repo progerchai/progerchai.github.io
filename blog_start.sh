@@ -10,8 +10,8 @@ cd $BLOGROOTPATH
 
 # 判断是否已存在代码,若已存在则只需要pull即可
 
-if [ ! -d "/progerchai.github.io/" ];then
-  echo '清除代码并重新拉取>>>>>>>>>>>>>>>>'
+if [ -d "/progerchai.github.io/" ];then
+  echo '未发现代码，重新拉取>>>>>>>>>>>>>>>>'
   git clone https://github.com/progerchai/progerchai.github.io.git
   else
   echo '开始拉取代码>>>>>>>>>>>>>>>>'
