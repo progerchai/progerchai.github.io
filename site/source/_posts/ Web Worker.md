@@ -118,6 +118,10 @@ componentWillUnmount() {
 
 或者是短时间内需要大量操作的时候,可以通过 Web Worker 这种比较 hack 的方式,将任务放到 worker 线程去执行,这样就不会阻塞程序的主线程,导致页面卡顿
 
+附上一张 Web Worker 兼容性表
+
+![](/static/notion/Web%20Worker/Untitled%204.png)
+
 ---
 
 > 感谢阅读,勘误、纠错或其他请联系progerchai@gmail.com,或者[点击这里](https://github.com/progerchai/progerchai.github.io/issues/new)提 issue 给我
