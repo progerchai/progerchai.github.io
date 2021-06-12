@@ -2,7 +2,7 @@
 title: Fix Nginx redirected you too many times
 date: 2021-04-13 23:21:54
 tags: [Nginx, Fix, 运维]
-keywords: [Nginx, Fix, 运维]
+keywords: [Nginx, 运维]
 ---
 
 # Fix Nginx redirected you too many times
