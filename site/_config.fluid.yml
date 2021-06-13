@@ -753,7 +753,8 @@ twikoo:
 # Archive Page
 #---------------------------
 archive:
-  banner_img: /img/default.png
+  # banner_img: /img/default.png
+  banner_img: /static/img/sky.jpeg
   banner_img_height: 60
   banner_mask_alpha: 0.3
   subtitle:
@@ -790,7 +791,8 @@ category:
 #---------------------------
 tag:
   enable: true
-  banner_img: /img/default.png
+  # banner_img: /img/default.png
+  banner_img: /static/img/lonelyMan.jpeg
   banner_img_height: 80
   banner_mask_alpha: 0.3
   subtitle:
@@ -808,7 +810,8 @@ tag:
 #---------------------------
 about:
   enable: true
-  banner_img: /img/default.png
+  # banner_img: /img/default.png
+  banner_img: /static/img/stone.jpeg
   banner_img_height: 60
   banner_mask_alpha: 0.3
   subtitle:  # 打字机内容
