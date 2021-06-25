@@ -19,7 +19,7 @@ keywords: [React, 前端, React-Fiber]
 
 ![](/static/notion/React-Fiber/Untitled.png)
 
-[](https://mmbiz.qpic.cn/mmbiz_jpg/QRibyjewM1IBdVaOBtH7ib6uuBKKrs7f06rC7ibyV3LImDT5LDtibYb6AE1HSzOVpKdLMxc6cJPbLRXdblQC9Wv1bA/640?wx_fmt=jpeg&tp=webp&wxfrom=5&wx_lazy=1&wx_co=1)
+![](/static/notion/React-Fiber/640.webp)
 
 1. 首先需要处理输入事件，能够让用户得到最早的反馈
 2. 接下来是处理定时器，需要检查定时器是否到时间，并执行对应的回调
@@ -39,30 +39,30 @@ js 引擎和页面渲染引擎是在同一个渲染线程之内，两者是互�
 
 ```jsx
 const root = {
-  key: "A1",
+  key: 'A1',
   children: [
     {
-      key: "B1",
+      key: 'B1',
       children: [
         {
-          key: "C1",
+          key: 'C1',
           children: [],
         },
         {
-          key: "C2",
+          key: 'C2',
           children: [],
         },
       ],
     },
     {
-      key: "B2",
+      key: 'B2',
       children: [
         {
-          key: "C3",
+          key: 'C3',
           children: [],
         },
         {
-          key: "C4",
+          key: 'C4',
           children: [],
         },
       ],
@@ -188,16 +188,16 @@ PS：这里需要说明一下，Fiber 是 React 进行重构的核心算法，fi
 ```jsx
 let taskQueue = [
   () => {
-    console.log("task1 start");
-    console.log("task1 end");
+    console.log('task1 start');
+    console.log('task1 end');
   },
   () => {
-    console.log("task2 start");
-    console.log("task2 end");
+    console.log('task2 start');
+    console.log('task2 end');
   },
   () => {
-    console.log("task3 start");
-    console.log("task3 end");
+    console.log('task3 start');
+    console.log('task3 end');
   },
 ];
 
@@ -241,19 +241,19 @@ const sleep = (delay) => {
 
 let taskQueue = [
   () => {
-    console.log("task1 start");
+    console.log('task1 start');
     sleep(20); // 已经超过一帧的时间（16.6ms），需要把控制权交给浏览器
-    console.log("task1 end");
+    console.log('task1 end');
   },
   () => {
-    console.log("task2 start");
+    console.log('task2 start');
     sleep(20); // 已经超过一帧的时间（16.6ms），需要把控制权交给浏览器
-    console.log("task2 end");
+    console.log('task2 end');
   },
   () => {
-    console.log("task3 start");
+    console.log('task3 start');
     sleep(20); // 已经超过一帧的时间（16.6ms），需要把控制权交给浏览器
-    console.log("task3 end");
+    console.log('task3 end');
   },
 ];
 ```
@@ -317,7 +317,7 @@ class UpdateQueue {
     while (currentUpdate) {
       // 判断是函数还是对象，是函数则需要执行，是对象则直接返回
       let nextState =
-        typeof currentUpdate.payload === "function"
+        typeof currentUpdate.payload === 'function'
           ? currentUpdate.payload(currentState)
           : currentUpdate.payload;
       currentState = { ...currentState, ...nextState };
@@ -335,7 +335,7 @@ class UpdateQueue {
 
 ```jsx
 let queue = new UpdateQueue();
-queue.enqueueUpdate(new Update({ name: "www" }));
+queue.enqueueUpdate(new Update({ name: 'www' }));
 queue.enqueueUpdate(new Update({ age: 10 }));
 queue.enqueueUpdate(new Update((state) => ({ age: state.age + 1 })));
 queue.enqueueUpdate(new Update((state) => ({ age: state.age + 1 })));
@@ -417,13 +417,13 @@ fiber 节点包括了以下的属性：
 定义树结构：
 
 ```jsx
-const A1 = { type: "div", key: "A1" };
-const B1 = { type: "div", key: "B1", return: A1 };
-const B2 = { type: "div", key: "B2", return: A1 };
-const C1 = { type: "div", key: "C1", return: B1 };
-const C2 = { type: "div", key: "C2", return: B1 };
-const C3 = { type: "div", key: "C3", return: B2 };
-const C4 = { type: "div", key: "C4", return: B2 };
+const A1 = { type: 'div', key: 'A1' };
+const B1 = { type: 'div', key: 'B1', return: A1 };
+const B2 = { type: 'div', key: 'B2', return: A1 };
+const C1 = { type: 'div', key: 'C1', return: B1 };
+const C2 = { type: 'div', key: 'C2', return: B1 };
+const C3 = { type: 'div', key: 'C3', return: B2 };
+const C4 = { type: 'div', key: 'C4', return: B2 };
 
 A1.child = B1;
 B1.sibling = B2;
@@ -438,7 +438,7 @@ module.exports = A1;
 写遍历方法：
 
 ```jsx
-let rootFiber = require("./element");
+let rootFiber = require('./element');
 
 const beginWork = (Fiber) => {
   console.log(`${Fiber.key} start`);
@@ -469,7 +469,7 @@ const workloop = (nextUnitOfWork) => {
     nextUnitOfWork = performUnitOfWork(nextUnitOfWork);
   }
   if (!nextUnitOfWork) {
-    console.log("reconciliation阶段结束");
+    console.log('reconciliation阶段结束');
   }
 };
 
@@ -526,7 +526,7 @@ const reconcileChildren = (currentFiber, newChildren) => {
     if (newChild.type === ELEMENT_TEXT) {
       // 这是文本节点
       tag = TAG_TEXT;
-    } else if (typeof newChild.type === "string") {
+    } else if (typeof newChild.type === 'string') {
       // 如果type是字符串，则是原生DOM节点
       tag = TAG_HOST;
     }
@@ -673,7 +673,7 @@ const workloop = (deadline) => {
     shouldYield = deadline.timeRemaining() < 1; // 如果执行完任务后，剩余时间小于1ms，则需要让出控制权给浏览器
   }
   if (!nextUnitOfWork && workInProgressRoot) {
-    console.log("render阶段结束");
+    console.log('render阶段结束');
     commitRoot(); // 没有下一个任务了，根据effect list结果批量更新视图
   }
   // 请求浏览器进行再次调度
