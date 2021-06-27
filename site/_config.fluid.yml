@@ -202,7 +202,17 @@ custom_css:
 
 # 自定义 <head> 节点中的 HTML 内容
 # Customize <head> HTML content
-custom_head: ''
+custom_head: ' <script type="text/javascript" id="clustrmaps" src="//clustrmaps.com/map_v2.js?d=XQDFH_DQay5x3CnxcxYr1Gc6ZkNqRun2s5NTHAnCZX4&cl=ffffff&w=a"></script>
+  <script data-ad-client="ca-pub-3823526339053072" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  <script desc="baidu 站长统计">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?b61479525c59af8c810ed9a90f8398a3";
+      var s = document.getElementsByTagName("script")[0]; 
+      s.parentNode.insertBefore(hm, s);
+    })();
+    </script>'
 
 # 自定义底部 HTML 内容（位于 footer 上方），注意不要和 `post: custom` 配置冲突
 # Customize the HTML content at the bottom (located above the footer), be careful not to conflict with `post: custom`
@@ -834,7 +844,7 @@ about:
 # 通过 hexo new page 命令创建的页面
 # Custom Page through `hexo new page`
 #---------------------------
-page:
+test:
   banner_img: /img/default.png
   banner_img_height: 60
   banner_mask_alpha: 0.3
