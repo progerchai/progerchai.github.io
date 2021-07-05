@@ -63,7 +63,7 @@ window.addEventListener('scroll', this.scroll);
 
 ![](/static/notion/IntersectionObserver/demo1.gif)
 
-## 方案二 : IntersectionObserver
+## 方案三 : IntersectionObserver
 
 > MDN:[https://developer.mozilla.org/zh-CN/docs/Web/API/Intersection_Observer_API](https://developer.mozilla.org/zh-CN/docs/Web/API/Intersection_Observer_API)
 
@@ -93,7 +93,7 @@ componentDidMount() {
 
 componentWillUnmount() {
 // 组件卸载记得取消监听
-    this.observer.disconnect()
+    this.observer && this.observer.disconnect()
 }
 ```
 
