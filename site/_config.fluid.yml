@@ -402,9 +402,9 @@ footer:
     # ICP证号
     icp_text: 浙ICP备18056527号-2
     # 公安备案号，不填则只显示ICP
-    police_text: 浙公网安备 30157477088504851
+    police_text: 浙公网安备 33011002016765
     # 公安备案的编号，用于URL跳转查询
-    police_code: 18056527
+    police_code: 33011002016765
     # 公安备案的图片. 为空时不显示备案图片
     police_icon: /img/police_beian.png
 
