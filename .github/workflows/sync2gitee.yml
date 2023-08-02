@@ -1,0 +1,16 @@
+# 通过 Github actions， 在 Github 仓库的每一次 commit 后自动同步到 Gitee 上
+name: sync2gitee
+on:
+  push:
+    branches:
+      - main
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: wearerequired/git-mirror-action@master #开源actions包
+        env:
+          SSH_PRIVATE_KEY: '62fde4043cdd6c73286c1fc00258eb82'
+        with:
+          source-repo: "git@github.com:progerchai/progerchai.github.io.git" # github仓库地址
+          destination-repo: "git@gitee.com:proger/progerchai.github.io.git" # gitee仓库地址
