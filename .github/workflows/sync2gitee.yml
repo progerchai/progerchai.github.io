@@ -10,7 +10,7 @@ jobs:
     steps:
       - uses: wearerequired/git-mirror-action@master #开源actions包
         env:
-          SSH_PRIVATE_KEY: '62fde4043cdd6c73286c1fc00258eb82'
+          SSH_PRIVATE_KEY: ${{secrets.SYNCGITEEPRIVATEKEY}}
         with:
-          source-repo: "git@github.com:progerchai/progerchai.github.io.git" # github仓库地址
-          destination-repo: "git@gitee.com:proger/progerchai.github.io.git" # gitee仓库地址
+          source-repo: 'git@github.com:progerchai/progerchai.github.io.git' # github仓库地址
+          destination-repo: 'git@gitee.com:proger/progerchai.github.io.git' # gitee仓库地址
