@@ -136,6 +136,14 @@ brew install jq
 yum -y install jq
 ```
 
+可以输出结果之后，还有最后一步要做，就是回车将结果粘贴到剪切板。
+
+Alfred本身有这个能力，只需右键Outputs→Copy to Clipboard ，新建一个对象，并在页面上讲脚本对象和输出对象通过线进行关联，如下图所示：
+
+![Untitled](/static/notion/alfred/Untitled%2012.png)
+
+![Untitled](/static/notion/alfred/Untitled%2013.png)
+
 到此保存，workflow完成～
 
 上面演示的是中译英，英译中同理，只需修改一下curl 参数即可
