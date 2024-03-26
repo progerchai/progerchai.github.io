@@ -255,9 +255,9 @@ export function handleChildren<T extends HTMLElement>(node: T): HTMLElement {
 
 效果： 低版本功能正常
 
-![正常样式](/static/notion/toPng/1678082459207-0bb6b0f5-696a-4c9b-980d-041543913d3f.png)
+![正常样式](/static/notion/toPng/1678082459207-0bb6b0f5-696a-4c9b-980d-041543913d3f.jpg)
 
-![低版本样式](/static/notion/toPng/1678082459207-0bb6b0f5-696a-4c9b-980d-041543913d3f.png)
+![低版本样式](/static/notion/toPng/1678082459207-0bb6b0f5-696a-4c9b-980d-041543913d3f.jpg)
 
 其他考虑：
 
