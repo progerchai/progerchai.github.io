@@ -934,23 +934,23 @@ static_prefix:
   # Icon library, which includes many social icons, does not include those theme dependent, so your can modify link by yourself. See: https://hexo.fluid-dev.com/docs/en/icon/
   iconfont: //at.alicdn.com/t/font_1736178_kmeydafke9r.css
 
-  anchor: https://cdn.jsdelivr.net/npm/anchor-js@4.3.0/
+  anchor: https://source.proger.cn/proger/
 
-  github_markdown: https://cdn.jsdelivr.net/npm/github-markdown-css@4.0.0/
+  github_markdown: https://source.proger.cn/proger/
 
   jquery: https://source.proger.cn/proger/
 
   bootstrap: https://source.proger.cn/proger/
 
-  highlightjs: https://cdn.jsdelivr.net/npm/highlight.js@10.4.0/
+  highlightjs: https://source.proger.cn/proger/
 
   prismjs: https://cdn.jsdelivr.net/npm/prismjs@1.22.0/
 
-  tocbot: https://cdn.jsdelivr.net/npm/tocbot@4.12.0/dist/
+  tocbot: https://source.proger.cn/proger/
 
   typed: https://source.proger.cn/proger/
 
-  fancybox: https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@3.5.7/dist/
+  fancybox: https://source.proger.cn/proger/
 
   nprogress: https://source.proger.cn/proger/
 
